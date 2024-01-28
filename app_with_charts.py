@@ -51,4 +51,4 @@ if input_csvs:
             if fig_number:
                 st.pyplot(plt.gcf())
             else:
-                st.success(result)
+                st.data_editor(result)
