@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 load_dotenv()
 
 #openai_api_key = os.getenv("OPENAI_API_KEY")
-openai_api_key = st("OPENAI_API_KEY")
-os.environ["OPENAI_API_KEY"] = ""
+openai_api_key = st.secrets("OPENAI_API_KEY")
+#os.environ["OPENAI_API_KEY"] = ""
 
 def chat_with_csv(df,prompt):
     llm = OpenAI(api_token=openai_api_key)
